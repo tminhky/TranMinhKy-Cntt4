@@ -3,37 +3,37 @@
 
 struct HonSo
 {
-	int Tu;
-	int Mau;
-	int Nguyen;
+	int tu;
+	int mau;
+	int nguyen;
 };
 typedef struct HonSo HONSO;
 
-void NhapHonSo(HONSO &);
-void XuatHonSo(HONSO);
+void HamNhap(HONSO &);
+void HamXuat(HONSO);
 
-void NhapHonSo(HONSO &hs)
+void HamNhap(HONSO &hso)
 {
 	printf("\nNhap so nguyen: ");
-	scanf("%d", &hs.Nguyen);
+	scanf("%d", &hso.nguyen);
 
 	printf("\nNhap tu so: ");
-	scanf("%d", &hs.Tu);
+	scanf("%d", &hso.tu);
 
 	printf("\nNhap mau so: ");
-	scanf("%d", &hs.Mau);
+	scanf("%d", &hso.mau);
 }
 
-void XuatHonSo(HONSO hs)
+void HamXuat(HONSO hso)
 {
-	printf("%d(%d/%d)", hs.Nguyen, hs.Tu, hs.Mau);
+	printf("%d(%d/%d)", hso.nguyen, hso.tu, hso.mau);
 }
 
 int main()
 {
-	HONSO hs;
-	NhapHonSo(hs);
-	XuatHonSo(hs);
+	HONSO hso;
+	HamNhap(hso);
+	HamXuat(hso);
 
 	getch();
 	return 0;
