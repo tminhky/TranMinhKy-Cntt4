@@ -9,9 +9,9 @@ struct Diem
 
 typedef struct Diem DIEM;
 
-void NhapDiem(DIEM &);
-void XuatDiem(DIEM);
-void NhapDiem(DIEM &d)
+void HamNhap(DIEM &);
+void HamXuat(DIEM);
+void HamNhap(DIEM &d)
 {
 	float toado;
 	printf("\nNhap x: ");
@@ -23,7 +23,7 @@ void NhapDiem(DIEM &d)
 	d.y = toado;
 }
 
-void XuatDiem(DIEM d)
+void HamXuat(DIEM d)
 {
 	printf("(%f, %f)", d.x, d.y);
 }
@@ -31,9 +31,10 @@ void XuatDiem(DIEM d)
 int main()
 {
 	DIEM d;
-	NhapDiem(d);
-	XuatDiem(d);
+	HamNhap(d);
+	HamXuat(d);
 
 	getch();
 	return 0;
 }
+
